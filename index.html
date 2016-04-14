@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="personalWebsite">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+  <link rel="stylesheet" href="style/style.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.js"></script>
+  <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"></script> -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="node_modules/angular-scroll/angular-scroll.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script src="js/personalWebsiteAppModule.js"></script>
+  <script src="js/homepageCtrl.js"></script>
+  <script src="js/DesignFactory.js"></script>
+  <script src="js/CommentFactory.js"></script>
+  <base href="/home"/>
+</head>
+<body ng-controller="mainCtrl">
+  <div id="fullBody">
+  <!-- <md-content> -->
+  <div id="toolbarDiv">
+    <md-toolbar class="md-primary">
+      <!-- <div layout="row" layout-align="center">
+        <img class="img-circle" ng-src="/iconsApp/Face.jpg">
+      </div> -->
+        <div class="md-toolbar-tools" layout="column" layout-align="center">
+            <h2 class="pageHeader"><span>Avinash David</span></h2>
+            <!-- <span flex></span> -->
+            <!-- <md-button class="md-icon-button" aria-label="More">
+              <md-icon md-svg-icon="iconsApp/facebook.png"></md-icon>
+            </md-button> -->
+            <!-- <md-button class="md-fab md-mini" aria-label="Favorite">
+              <md-icon md-svg-src="iconsApp/linkedin.png"></md-icon>
+            </md-button> -->
+          </div>
+        </md-toolbar>
+        <md-toolbar flex>
+            <div layout="row" layout-align="center">
+              <a class="waves-effect waves-indigo btn-flat white-text" ng-repeat="headerCategory in headerCategories track by $index" ng-click="go(headerCategory, $index)" ng-class="{'indigo':headerCategories[$index].chosen,'ligten-1':headerCategories[$index].chosen}"><span class="flow-text">
+                  <!-- <md-button class="headerButtons md-primary" ng-repeat="headerCategory in headerCategories track by $index" ng-click="go(headerCategory, $index)" ng-class="{'md-hue-1':headerCategories[$index].chosen,'md-raised':headerCategories[$index].chosen}"> -->
+                    {{headerCategory.name}}</span>
+                  </a>
+                  <!-- </md-button> -->
+            </div>
+      </md-toolbar>
+    </div>
+    <div>
+      <ng-view></ng-view>
+    </div>
+  <!-- </md-content> -->
+</div>
+<script>$('.collapsible').collapsible();</script>
+</body>
+</html>

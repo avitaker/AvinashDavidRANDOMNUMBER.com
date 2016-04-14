@@ -1,0 +1,35 @@
+<div ng-cloak layout-margin layout-padding>
+
+  <div class="card">
+    <div class="card-content ">
+      <span class="card-title">Leave a comment</span>
+      <div>
+        <form name="commentForm" class="white-text">
+          <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Name*</label>
+              <input ng-model="commentObj.firstName" ng-minlength="2" md-maxlength="40" required>
+              <div ng-messages=commentObj.firstName.$error>
+                <div ng-message=required>This is required!</div>
+                <!-- <div ng-message="ng-minlength">Not enough characters</div> -->
+              </div>
+            </md-input-container>
+          </div>
+          <md-input-container class="md-block">
+            <label>Email*</label>
+            <input required ng-model="commentObj.email" type="email">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Subject</label>
+            <input ng-model="commentObj.subject" md-maxlength="30">
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Comment*</label>
+            <textarea class="materialize-textarea" required ng-model="commentObj.comment" md-maxlength="300" length="300" rows="5" md-select-on-focus></textarea>
+          </md-input-container>
+          <md-button class="md-primary md-raised" ng-click="submitComment()">Submit</md-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

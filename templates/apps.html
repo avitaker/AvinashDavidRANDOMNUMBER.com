@@ -1,0 +1,40 @@
+<!-- <md-content class="md-padding"> -->
+  <!-- <md-toolbar class="md-accent md-hue-1"> -->
+     <!-- <h2 class="md-toolbar-tools" layout-align="center">
+       <span>APPS</span>
+     </h2> -->
+  <!-- </md-toolbar> -->
+  <!-- <md-content flex layout-padding> -->
+    <div layout="row">
+      <div flex="35">
+      </div>
+      <div flex="65">
+        <div layout-margin layout-padding>
+          <div class="card amber lighten-5">
+            <div class="card-content  flow-text">
+              <span class="card-title">Play Store</span>
+              <!-- <md-list ng-cloak> -->
+              <ul>
+                <li layout="row" ng-repeat="item in appObjArr track by $index" ng-click="showTabDialog($event,$index)">
+                  <a>{{item.name}}</a>
+                  <md-button class="md-secondary" ng-click="externalGo(item)">Link</md-button>
+                </li>
+              </ul>
+              <!-- </md-list> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="section">
+      <p>{{introText}}</p>
+      <md-list ng-cloak>
+        <md-list-item ng-repeat="item in appObjArr track by $index" ng-click="showTabDialog($event,$index)">
+          <p>{{item.name}}</p>
+          <md-button class="md-secondary" ng-click="externalGo(item)">Play Store</md-button>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </div> -->
+  <!-- </md-content> -->
+<!-- </md-content> -->

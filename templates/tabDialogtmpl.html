@@ -1,0 +1,42 @@
+<md-dialog aria-label="{{appObjArr[whichOne].name}}" ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{appObjArr[whichOne].name}}</h2>
+        <span flex></span>
+        <!-- <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button> -->
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Description">
+          <md-content class="md-padding">
+            <div class="section">
+            <!-- <h1 class="md-display-2">{{appObjArr[whichOne].name}}</h1> -->
+              <p>{{appObjArr[whichOne].desc}}</p>
+            </div>
+          </md-content>
+        </md-tab>
+        <md-tab label="Screenshots">
+          <md-content>
+            <div class="container-outer">
+               <div class="container-inner" ng-style="containerInnerStyle" layout-margin layout-padding>
+                  <!-- Your images over here -->
+                  <img ng-repeat="imgPath in imgPathArr track by $index" ng-src="{{imgPath}}" ng-style="objStyle">
+                  <!-- <img ng-src="{{image2Path}}" class="appScreenshotImg"> -->
+               </div>
+            </div>
+            </md-content>
+          <!-- <md-content> -->
+
+          <!-- </md-content> -->
+        </md-tab>
+      </md-tabs>
+    </md-dialog-content>
+    <md-dialog-actions>
+      <md-button ng-click="cancel()">Exit</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

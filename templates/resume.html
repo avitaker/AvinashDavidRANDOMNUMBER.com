@@ -1,0 +1,313 @@
+<div>
+
+  <!-- <div layout="row" show-gt-md hide-md hide-sm hide-xs> -->
+  <div layout="row">
+    <div flex="35">
+      <!-- <div class="row" layout-margin layout-padding> -->
+        <div scroll  layout-padding ng-class="{dontScroll:boolChangeClass}">
+          <div class="column">
+            <div flex>
+              <!-- <md-button md-no-ink class="md-primary" ng-click="goTo('work')">
+                <span class="md-display-1">Work Experience</span>
+              </md-button> -->
+              <a class="waves-effect waves-indigo btn-flat " ng-click="goTo('work')"><span class="flow-text">Work</span></a>
+            </div>
+
+            <div flex>
+              <!-- <md-button md-no-ink class="md-primary" ng-click="goTo('published')">
+                <span class="md-display-1">Published Apps</span>
+              </md-button> -->
+              <a class="waves-effect waves-indigo btn-flat " ng-click="goTo('published')"><span class="flow-text">Published</span></a>
+            </div>
+
+            <div flex>
+              <!-- <md-button md-no-ink class="md-primary" ng-click="goTo('personal')">
+                <span class="md-display-1">Personal Projects</span>
+              </md-button> -->
+              <a class="waves-effect waves-indigo btn-flat " ng-click="goTo('personal')"><span class="flow-text">Personal</span></a>
+            </div>
+
+
+            <div flex>
+              <!-- <md-button md-no-ink class="md-primary" ng-click="goTo('education')">
+                <span class="md-display-1">Education</span>
+              </md-button> -->
+              <a class="waves-effect waves-indigo btn-flat " ng-click="goTo('education')"><span class="flow-text">Education</span></a>
+            </div>
+
+            <div flex>
+              <!-- <md-button md-no-ink class="md-primary" ng-click="goTo('extracurricular')">
+                <span class="md-display-1">Extracurricular</span>
+              </md-button> -->
+              <a class="waves-effect waves-indigo btn-flat " ng-click="goTo('extracurricular')"><span class="flow-text">Extracurricular</span></a>
+            </div>
+
+            <div flex>
+              <!-- <md-button md-no-ink class="md-primary" ng-click="goTo('volunteer')">
+                <span class="md-display-1">Volunteer Work</span>
+              </md-button> -->
+              <a class="waves-effect waves-indigo btn-flat " ng-click="goTo('volunteer')"><span class="flow-text">Volunteer</span></a>
+            </div>
+
+            <div flex>
+              <!-- <md-button md-no-ink class="md-primary" ng-click="goTo('skills')">
+                <span class="md-display-1">Skills</span>
+              </md-button> -->
+              <a class="waves-effect waves-indigo btn-flat " ng-click="goTo('skills')"><span class="flow-text">Skills</span></a>
+            </div>
+
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+    <div  flex="65">
+      <div layout-margin layout-padding>
+        <div class="column">
+          <div id="work" class="card indigo lighten-5">
+            <div class="card-content  flow-text">
+              <span class="card-title">Work Experience</span>
+              <div ng-repeat-start="project in workExperienceArr">
+                <div class="section">
+                  <h5 class="title">{{project.emploYear}}</h5>
+                  <h6><i>{{project.city}}</i></h6>
+                  <div ng-repeat-start="point in project.bullets">
+                    <blockquote>
+                      <p>{{point}}</p>
+                    </blockquote>
+                  </div>
+                  <div ng-repeat-end></div>
+                </div>
+                <div class="divider" ng-if="!$last"></div>
+              </div>
+              <div ng-repeat-end></div>
+            </div>
+          </div>
+
+          <div id="published" class="card indigo lighten-5">
+            <div class="card-content low-text">
+              <span class="card-title">Published Apps</span>
+              <div ng-repeat="project in publishedAppArr">
+                <div class="section">
+                  <h5 class="title">{{project.name}}</h5>
+                  <h6><i> {{project.skills}} </i></h6>
+                  <blockquote>
+                    <p>{{project.bullets[0]}}</p>
+                  </blockquote>
+                </div>
+                <div class="divider" ng-if="!$last"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="personal" class="card indigo lighten-5">
+            <div class="card-content low-text">
+              <span class="card-title">Personal Projects</span>
+              <div ng-repeat="project in personalProjectArr">
+                <div class="section">
+                  <h5 class="title">{{project.name}}</h5>
+                  <h6><i> {{project.skills}} </i></h6>
+                  <blockquote>
+                    <p>{{project.bullets[0]}}</p>
+                  </blockquote>
+                </div>
+                <div class="divider" ng-if="!$last"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="education" class="card indigo lighten-5">
+            <div class="card-content flow-text">
+              <span class="card-title">Education</span>
+              <div ng-repeat-start="project in educationArr">
+                <div class="section">
+                  <h5 class="title">{{project.school}}</h5>
+                  <h6><i>{{project.city}}</i></h6>
+                  <div ng-repeat-start="point in project.bullets">
+                    <blockquote>
+                      <p>{{point}}</p>
+                    </blockquote>
+                  </div>
+                  <div ng-repeat-end></div>
+                </div>
+                <div class="divider" ng-if="!$last"></div>
+              </div>
+              <div ng-repeat-end></div>
+            </div>
+          </div>
+
+          <div id="extracurricular" class="card indigo lighten-5">
+            <div class="card-content flow-text">
+              <span class="card-title">Extracurricular Activities</span>
+              <div ng-repeat-start="project in extracurricularArr">
+                <div class="section">
+                  <h5 class="title">{{project.school}}</h5>
+                  <h6><i>{{project.city}}</i></h6>
+                  <div ng-repeat-start="point in project.bullets">
+                    <blockquote>
+                      <p>{{point}}</p>
+                    </blockquote>
+                  </div>
+                  <div ng-repeat-end></div>
+                </div>
+                <div class="divider" ng-if="!$last"></div>
+              </div>
+              <div ng-repeat-end></div>
+            </div>
+          </div>
+
+          <div id="volunteer" class="card indigo lighten-5">
+            <div class="card-content flow-text">
+              <span class="card-title">Volunteer work</span>
+              <div ng-repeat-start="project in volunteerArr">
+                <div class="section">
+                  <h5 class="title">{{project.emploYear}}</h5>
+                  <h6><i>{{project.city}}</i></h6>
+                  <div ng-repeat-start="point in project.bullets">
+                    <blockquote>
+                      <p>{{point}}</p>
+                    </blockquote>
+                  </div>
+                  <div ng-repeat-end></div>
+                </div>
+                <div class="divider" ng-if="!$last"></div>
+              </div>
+              <div ng-repeat-end></div>
+            </div>
+          </div>
+
+          <div id="skills" class="card indigo lighten-5">
+            <div class="card-content flow-text">
+              <span class="card-title">Skills</span>
+              <div ng-repeat-start="project in skillsArr">
+                <div class="section">
+                  <h5 class="title">{{project.category}}</h5>
+                  <!-- <h6><i>{{project.city}}</i></h6> -->
+                  <div class="chip" ng-repeat-start="point in project.members">
+                    <!-- <blockquote> -->
+                      {{point}}
+                    <!-- </blockquote> -->
+                  </div>
+                  <div ng-repeat-end></div>
+                </div>
+                <div class="divider" ng-if="!$last"></div>
+              </div>
+              <div ng-repeat-end></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="column flow-text" layout-margin layout-padding hide-gt-md show-md show-sm show-xs>
+    <div class="card indigo darken-3">
+      <div class="card-content white-text">
+        <span class="card-title">Work Experience</span>
+        <div ng-repeat-start="project in workExperienceArr">
+          <div class="section">
+            <h5 class="title">{{project.emploYear}}</h5>
+            <h6><i>{{project.city}}</i></h6>
+            <div ng-repeat-start="point in project.bullets">
+              <blockquote>
+                <p>{{point}}</p>
+              </blockquote>
+            </div>
+            <div ng-repeat-end></div>
+          </div>
+          <div class="divider" ng-if="!$last"></div>
+        </div>
+        <div ng-repeat-end></div>
+      </div>
+    </div>
+
+    <div class="card indigo darken-3">
+      <div class="card-content white-text ">
+        <span class="card-title">Published Apps</span>
+        <div ng-repeat="project in publishedAppArr">
+          <div class="section">
+            <h5 class="title">{{project.name}}</h5>
+            <h6><i> {{project.skills}} </i></h6>
+            <blockquote>
+              <p>{{project.bullets[0]}}</p>
+            </blockquote>
+          </div>
+          <div class="divider" ng-if="!$last"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card indigo darken-3">
+      <div class="card-content white-text ">
+        <span class="card-title">Personal Projects</span>
+        <div ng-repeat="project in personalProjectArr">
+          <div class="section">
+            <h5 class="title">{{project.name}}</h5>
+            <h6><i> {{project.skills}} </i></h6>
+            <blockquote>
+              <p>{{project.bullets[0]}}</p>
+            </blockquote>
+          </div>
+          <div class="divider" ng-if="!$last"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card indigo darken-3">
+      <div class="card-content white-text ">
+        <span class="card-title">Education</span>
+        <div ng-repeat-start="project in educationArr">
+          <div class="section">
+            <h5 class="title">{{project.school}}</h5>
+            <h6><i>{{project.city}}</i></h6>
+            <div ng-repeat-start="point in project.bullets">
+              <blockquote>
+                <p>{{point}}</p>
+              </blockquote>
+            </div>
+            <div ng-repeat-end></div>
+          </div>
+          <div class="divider" ng-if="!$last"></div>
+        </div>
+        <div ng-repeat-end></div>
+      </div>
+    </div>
+    <div class="card indigo darken-3">
+      <div class="card-content white-text ">
+        <span class="card-title">Extracurricular Activities</span>
+        <div ng-repeat-start="project in extracurricularArr">
+          <div class="section">
+            <h5 class="title">{{project.school}}</h5>
+            <h6><i>{{project.city}}</i></h6>
+            <div ng-repeat-start="point in project.bullets">
+              <blockquote>
+                <p>{{point}}</p>
+              </blockquote>
+            </div>
+            <div ng-repeat-end></div>
+          </div>
+          <div class="divider" ng-if="!$last"></div>
+        </div>
+        <div ng-repeat-end></div>
+      </div>
+    </div>
+    <div class="card indigo darken-3">
+      <div class="card-content white-text ">
+        <span class="card-title">Volunteer work</span>
+        <div ng-repeat-start="project in volunteerArr">
+          <div class="section">
+            <h5 class="title">{{project.emploYear}}</h5>
+            <h6><i>{{project.city}}</i></h6>
+            <div ng-repeat-start="point in project.bullets">
+              <blockquote>
+                <p>{{point}}</p>
+              </blockquote>
+            </div>
+            <div ng-repeat-end></div>
+          </div>
+          <div class="divider" ng-if="!$last"></div>
+        </div>
+        <div ng-repeat-end></div>
+      </div>
+    </div>
+  </div> -->
+
+</div>

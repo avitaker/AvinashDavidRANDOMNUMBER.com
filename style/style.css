@@ -1,0 +1,130 @@
+body, html {
+    width: 100%;
+    height: 100%;
+}
+.page-container {
+  background-color: #f1f1f1;
+  padding: 32px; }
+.page {
+  margin: 0 auto;
+  background-color: white;
+  padding: 24px;
+  max-width: 680px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25); }
+.page h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 0;
+  font-weight: normal; }
+.page p {
+  line-height: 1.6rem; }
+.inputErrorsApp {
+  min-height: 48px; }
+md-input-container > p {
+  font-size: 0.8em;
+  text-align: left;
+  width: 100%; }
+  #fullBody{
+    background-color: #f1f1f1;
+    min-height: 100%;
+  }
+  .homeBody{
+    background-image: url("https://pixabay.com/static/uploads/photo/2015/01/14/21/21/globe-thistle-599653_960_720.jpg");
+    min-height: 100%;
+    -min-height: 100%;
+    min-width: 100px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: absolute;
+    /*top: 0;
+    left: 0;*/
+  }
+
+  .homeDiv{
+    /*background-image: url("/iconsApp/backgroundImg.jpg");*/
+    background-size: contain;
+    min-height: 100%;
+    /*-min-height: 100%;*/
+    /*min-width: 100px;*/
+    width: 100%;
+    height: 100%;
+    /*position: absolute;*/
+background-size: 100%;
+  }
+
+  .home-content{
+    align-items: center;
+    /*background-image: url("https://pixabay.com/static/uploads/photo/2015/01/14/21/21/globe-thistle-599653_960_720.jpg");
+    background-size: cover;
+    min-height: : 100%;*/
+  }
+
+  .img-circle {
+    margin-top: 10px;
+    border-radius: 50%;
+    height: auto;
+    width: auto;
+    max-width: 20%;
+    max-height: 100px;
+}
+
+.pageHeader{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.introTextStyle{
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.headerButtons{
+  text-transform: lowercase;
+  font-size: 25px;
+}
+
+.skillChips{
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 0 8px; }
+
+.cardImg{
+  /*height: 60%;*/
+  width: auto;
+  /*max-height: 500px;*/
+  /*min-height: 60%;*/
+}
+
+.appScreenshotImg{
+  height: 200px;
+  width: auto;
+}
+
+.container-outer { overflow: scroll;}
+.container-inner { width:2500px;height: auto;}
+
+/* resize images */
+.imgcontainer img {
+    width: 100%;
+    height: auto;
+}
+
+.dontScroll{
+  position: fixed;
+    top: 0px;
+    /*bottom: 10px;*/
+    overflow-y: auto;
+}
+
+.resumeBtnDiv{
+  position:absolute;
+  overflow-y: auto;
+}
+
+.doScroll{
+  position: absolute;
+  overflow-y: auto;
+}

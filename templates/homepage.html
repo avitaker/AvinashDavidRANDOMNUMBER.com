@@ -1,0 +1,90 @@
+<div class="homeDiv">
+  <div layout="column" hide-xs hide-sm hide-md>
+    <div layout="row">
+      <div flex="5"></div>
+      <div flex="55" layout="column" layout-margin>
+        <!-- <md-card>
+          <md-card-content>
+            <p class="md-title">Here's the nitty gritty</p>
+            <md-list>
+              <md-list-item class="md-3-line" ng-repeat="item in introArr">
+                <div class="md-list-item-text">
+                  <h3>{{item.category}}</h3>
+                  <p>{{item.answer}}</p>
+                </div>
+                <md-divider ng-if="!$last"></md-divider>
+              </md-list-item>
+            </md-list>
+          </md-card-content>
+        </md-card> -->
+        <div class="card">
+          <div class="card-content">
+              <span class="card-title">Here's the nitty gritty</span>
+              <div ng-repeat="item in introArr">
+                <div class="section">
+                  <h5 class="title">{{item.category}}</h5>
+                  <p>{{item.answer}}</p>
+                </div>
+                <div class="divider" ng-if="!$last"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div flex="35" id="cardImageColumn" layout-margin>
+        <div class="card" flex-offset="5">
+            <div class="card-image">
+              <img ng-src="{{imgPath}}" class="md-card-image cardImg" ng-style="styleObj" id="cardImageId">
+              <span class="card-title">Pictures</span>
+            </div>
+            <div class="card-content">
+              <p>{{cardImageSubtitle}}</p>
+            </div>
+            <!-- <div class="card-action">
+              <a href="#">This is a link</a>
+            </div> -->
+        </div>
+        <!-- <md-card>
+          <img ng-src="{{imgPath}}" class="md-card-image cardImg" ng-style="styleObj" id="cardImageId" alt="Beautiful">
+          <md-card-content>
+            <p class="md-subhead">Pictures</p>
+            <p>{{cardImageSubtitle}}</p>
+          </md-card-content>
+        </md-card> -->
+      </div>
+      <div flex="5"></div>
+    </div>
+  </div>
+
+  <div layout="row" hide-lg hide-xl>
+    <div flex="5"></div>
+    <div flex="90" layout="column" id="cardImageColumn1" class="flow-text">
+      <div class="card">
+        <div class="card-content">
+            <span class="card-title">Here's the nitty gritty</span>
+            <div ng-repeat="item in introArr">
+              <div class="section">
+                <h5 class="title">{{item.category}}</h5>
+                <p>{{item.answer}}</p>
+              </div>
+              <div class="divider" ng-if="!$last"></div>
+          </div>
+        </div>
+      </div>
+      <div id="cardImageColumn">
+        <div class="card" flex-offset="5">
+            <div class="card-image">
+              <img ng-src="{{imgPath}}" class="md-card-image cardImg" ng-style="styleObj" id="cardImageId">
+              <span class="card-title">Pictures</span>
+            </div>
+            <div class="card-content">
+              <p>{{cardImageSubtitle}}</p>
+            </div>
+            <!-- <div class="card-action">
+              <a href="#">This is a link</a>
+            </div> -->
+        </div>
+      </div>
+    </div>
+    <div flex="5"></div>
+  </div>
+</div>
